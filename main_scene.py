@@ -1,5 +1,6 @@
 import pygame
 from global_vars import Global_vars
+from Room_Controller import Room_Controller
 
 class Main_scene():
     def __init__(self, screen):
@@ -8,13 +9,15 @@ class Main_scene():
         self.title_section_height = 0.15
         self.title_section_width = 1
 
-        self.font_size = 48
+        self.font_size = 52
+        self.room_controller = Room_Controller()
 
     def render(self):
         # Draw the top part
         self.draw_title_section()
 
         # Draw the rooms
+        self.room_controller.draw()
 
     def draw_title_section(self):
         # 1) Draw the rect
