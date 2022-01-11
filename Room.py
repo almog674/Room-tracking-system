@@ -1,6 +1,7 @@
 import winsound
 import pygame
-from pygame.constants import KEYDOWN
+
+from gpiozero import Button
 
 from global_vars import Global_vars
 
@@ -13,6 +14,9 @@ class Room:
         self.number = number
         self.key = key
         self.screen = screen
+        print(key)
+        self.button = Button(key)
+
         self.color = (0, 255, 0)
 
         self.calling = False

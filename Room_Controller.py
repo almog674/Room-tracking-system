@@ -4,7 +4,7 @@ from global_vars import Global_vars
 
 class Room_Controller:
     def __init__(self):
-        keys = ['a', 's', 'd', 'f', 'g', 'h']
+        keys = [5, 6, 13, 16, 19, 26]
         self.height_percentage = 0.85
         self.height = Global_vars.HEIGHT * self.height_percentage
         self.start_y = (1 - self.height_percentage) * Global_vars.HEIGHT
