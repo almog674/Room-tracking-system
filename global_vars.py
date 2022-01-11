@@ -1,5 +1,6 @@
 import pygame
 
+
 class Global_vars:
     WIDTH  = 1000
     HEIGHT = 800
@@ -9,3 +10,7 @@ class Global_vars:
 
     IS_KEYDOWN = False
     KEYDOWN_UNICODE = ''
+
+    MIXER = pygame.mixer
+    MIXER.init()
+    RING_SOUND = MIXER.Sound("bell_ring.wav")

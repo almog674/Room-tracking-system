@@ -1,5 +1,4 @@
-from typing import Tuple
-
+import winsound
 import pygame
 from pygame.constants import KEYDOWN
 
@@ -43,4 +42,7 @@ class Room:
     def check_for_click(self):
         if Global_vars.IS_KEYDOWN:
             if Global_vars.KEYDOWN_UNICODE == self.key:
+                if not self.calling:
+                    Global_vars.RING_SOUND.play()
                 self.calling = not self.calling
+                
